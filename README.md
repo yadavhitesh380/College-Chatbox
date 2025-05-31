@@ -9,7 +9,6 @@ This is an AI-powered chatbot built using Streamlit and Google Gemini API to ass
 - Conversational AI interface powered by Google Gemini API
 - Focused responses related only to GGSIPU
 - Example questions sidebar to guide users
-- File upload support for documents like ID proofs and forms (PDF, JPG, PNG)
 - Real-time chat display with user and assistant messages
 - Admin dashboard for viewing recent chat logs
 - Option to download chat logs as a `.txt` file for record-keeping
@@ -30,7 +29,7 @@ This is an AI-powered chatbot built using Streamlit and Google Gemini API to ass
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/ggsipu-chatbot.git
+   git clone https://github.com/yadavhitesh380/ggsipu-chatbot.git
    cd ggsipu-chatbot
    ```
 
@@ -63,7 +62,6 @@ Open the URL shown in the terminal (usually `http://localhost:8501`) to interact
 
 - Type your questions related to GGSIPU in the chat input.
 - Use the example questions in the sidebar as inspiration.
-- Upload documents if needed.
 - Admins can view and download chat logs from the dashboard section.
 
 ---
@@ -72,7 +70,6 @@ Open the URL shown in the terminal (usually `http://localhost:8501`) to interact
 
 ```
 ├── main.py               # Main Streamlit app
-├── ggsipu_data.json      # (Optional) University data for additional context
 ├── requirements.txt      # Python dependencies
 ├── .streamlit/
 │   └── secrets.toml      # Store Gemini API key securely
@@ -99,6 +96,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Built with [Streamlit](https://streamlit.io/)
 - Powered by [Google Gemini API](https://developers.generativeai.google/)
-"# college-chatbot-ggsipu-" 
-"# college-chatbot-ggsipu-" 
-"# college-chatbox" 
