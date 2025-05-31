@@ -46,8 +46,6 @@ This is an AI-powered chatbot built using Streamlit and Google Gemini API to ass
    gemini_api_key = "YOUR_GOOGLE_GEMINI_API_KEY"
    ```
 
-4. Prepare the `ggsipu_data.json` file with relevant university data (optional for additional context).
-
 ### Running the App
 
 ```bash
