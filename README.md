@@ -69,8 +69,6 @@ Open the URL shown in the terminal (usually `http://localhost:8501`) to interact
 ```
 ├── main.py               # Main Streamlit app
 ├── requirements.txt      # Python dependencies
-├── .streamlit/
-│   └── secrets.toml      # Store Gemini API key securely
 └── README.md             # Project documentation
 ```
 
