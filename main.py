@@ -5,7 +5,7 @@ import datetime
 import pandas as pd
 
 # --- Streamlit Page Settings ---
-st.set_page_config(page_title="GGSIPU Helpdesk Chatbot", layout="centered")
+st.set_page_config(page_title="DSEU Helpdesk Chatbot", layout="centered")
 
 # --- Configure Gemini ---
 try:
@@ -14,12 +14,17 @@ except KeyError:
     st.error("Gemini API key not found. Set it in .streamlit/secrets.toml as 'gemini_api_key'.")
     st.stop()
 
-st.title("🎓 GGSIPU College Helpdesk AI Chatbot")
+st.title("🎓 DSEU College Helpdesk AI Chatbot")
 
 # --- Session State Initialization ---
 if 'messages' not in st.session_state:
     st.session_state.messages = [
-        {"role": "system", "content": "You are a helpful assistant for GGSIPU (Guru Gobind Singh Indraprastha University). Answer queries only about GGSIPU including admissions, courses, faculty, fees, events, contact info, etc. Do not talk about any other university."}
+        {
+            "role": "system",
+            "content": "You are a helpful assistant for DSEU (Delhi Skill and Entrepreneurship University). "
+                       "Answer queries only about DSEU including admissions, courses, faculty, fees, campuses, "
+                       "events, contact info, results, and placement details. Do not talk about any other university."
+        }
     ]
 
 if 'chat_logs' not in st.session_state:
@@ -28,11 +33,11 @@ if 'chat_logs' not in st.session_state:
 # --- Sidebar ---
 with st.sidebar:
     st.markdown("### 💡 Example Questions")
-    st.markdown("- What is the B.Tech CSE fee structure?")
-    st.markdown("- Who is the head of ECE department?")
-    st.markdown("- What are the hostel facilities?")
-    st.markdown("- How do I get my semester results?")
-    st.markdown("- What is the CET code for BCA?")
+    st.markdown("- What is the BCA course fee at DSEU?")
+    st.markdown("- Where is the Dwarka campus located?")
+    st.markdown("- How can I apply for DSEU admission?")
+    st.markdown("- What are the skill-based programs at DSEU?")
+    st.markdown("- Who is the VC of DSEU?")
 
 # --- Display Chat Messages ---
 for msg in st.session_state.messages[1:]:
@@ -51,13 +56,14 @@ if user_query := st.chat_input("Ask your question here..."):
                 # Build Gemini conversation history
                 api_history = [{"role": "user", "parts": [{"text": st.session_state.messages[0]['content']}]}]
                 for msg in st.session_state.messages[1:]:
-                    if not msg['content']: continue
+                    if not msg['content']:
+                        continue
                     role = 'user' if msg['role'] == 'user' else 'model'
                     if api_history and api_history[-1]['role'] == role:
                         api_history[-1]['parts'].append({"text": msg['content']})
                     else:
                         api_history.append({"role": role, "parts": [{"text": msg['content']}]} )
-                
+
                 model = genai.GenerativeModel("gemini-2.0-flash")
                 response = model.generate_content(api_history)
                 answer = response.text
