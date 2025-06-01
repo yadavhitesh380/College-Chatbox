@@ -1,8 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-import json
 import datetime
-import pandas as pd
 
 # --- Streamlit Page Settings ---
 st.set_page_config(page_title="DSEU Helpdesk Chatbot", layout="centered")
@@ -21,9 +19,13 @@ if 'messages' not in st.session_state:
     st.session_state.messages = [
         {
             "role": "system",
-            "content": "You are a helpful assistant for DSEU (Delhi Skill and Entrepreneurship University). "
-                       "Answer queries only about DSEU including admissions, courses, faculty, fees, campuses, "
-                       "events, contact info, results, and placement details. Do not talk about any other university."
+            "content": (
+                "You are a helpful assistant for DSEU (Delhi Skill and Entrepreneurship University). "
+                "Answer queries *only* based on the official DSEU website https://dseu.edu.in/. "
+                "Do not provide information outside of what is available on this site. "
+                "If you do not know the answer from this source, say you do not have the information instead of guessing. "
+                "Focus on admissions, courses, faculty, fees, campuses, events, contact info, results, and placement details only."
+            )
         }
     ]
 
@@ -53,7 +55,7 @@ if user_query := st.chat_input("Ask your question here..."):
         with st.spinner("Thinking..."):
             answer = ""
             try:
-                # Build Gemini conversation history
+                # Build Gemini conversation history with updated system prompt
                 api_history = [{"role": "user", "parts": [{"text": st.session_state.messages[0]['content']}]}]
                 for msg in st.session_state.messages[1:]:
                     if not msg['content']:
