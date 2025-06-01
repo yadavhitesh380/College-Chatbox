@@ -1,16 +1,17 @@
-# 🎓 DSEU College Helpdesk AI Chatbot
+# 🎓 GGSIPU College Helpdesk AI Chatbot
 
-This is an AI-powered chatbot built using Streamlit and the Google Gemini API to assist users with queries related to Delhi Skill and Entrepreneurship University (DSEU). The chatbot answers questions specifically about DSEU, including admissions, courses, faculty, fees, campuses, events, contact information, results, placements, and more.
+This is an AI-powered chatbot built using Streamlit and Google Gemini API to assist users with queries related to Guru Gobind Singh Indraprastha University (GGSIPU). The chatbot answers questions specifically about GGSIPU, including admissions, courses, faculty, fees, events, contact information, and more.
 
 ---
 
 ## Features
 
-- Conversational AI interface powered by Google Gemini API (`gemini-2.0-flash`)
-- Focused responses related only to DSEU
+- Conversational AI interface powered by Google Gemini API
+- Focused responses related only to GGSIPU
 - Example questions sidebar to guide users
+- File upload support for documents like ID proofs and forms (PDF, JPG, PNG)
 - Real-time chat display with user and assistant messages
-- Simulated admin dashboard for viewing recent chat logs
+- Admin dashboard for viewing recent chat logs
 - Option to download chat logs as a `.txt` file for record-keeping
 
 ---
@@ -29,8 +30,8 @@ This is an AI-powered chatbot built using Streamlit and the Google Gemini API to
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yadavhitesh380/college-chatbot.git
-   cd college-chatbot
+   git clone https://github.com/yadavhitesh380/ggsipu-chatbot.git
+   cd ggsipu-chatbot
    ```
 
 2. Install dependencies:
@@ -58,9 +59,10 @@ Open the URL shown in the terminal (usually `http://localhost:8501`) to interact
 
 ## Usage
 
-- Type your questions related to DSEU in the chat input.
+- Type your questions related to GGSIPU in the chat input.
 - Use the example questions in the sidebar as inspiration.
-- Admins can view and download chat logs from the simulated dashboard section.
+- Upload documents if needed.
+- Admins can view and download chat logs from the dashboard section.
 
 ---
 
@@ -78,7 +80,7 @@ Open the URL shown in the terminal (usually `http://localhost:8501`) to interact
 
 ## Notes
 
-- The chatbot is explicitly instructed to respond only about DSEU and ignore queries about other colleges or universities.
+- The chatbot is explicitly instructed to respond only about GGSIPU and ignore queries about other colleges or universities.
 - Chat logs are saved in the session and can be downloaded as a text file.
 - Make sure to keep your Gemini API key secure and do not expose it publicly.
 
@@ -94,3 +96,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Built with [Streamlit](https://streamlit.io/)
 - Powered by [Google Gemini API](https://developers.generativeai.google/)
+"# college-chatbot-ggsipu-" 
+"# college-chatbot-ggsipu-" 
