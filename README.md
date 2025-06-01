@@ -30,8 +30,8 @@ This is an AI-powered chatbot built using Streamlit and Google Gemini API to ass
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yadavhitesh380/ggsipu-chatbot.git
-   cd ggsipu-chatbot
+   git clone https://github.com/yadavhitesh380/college-chatbot.git
+   cd college-chatbot
    ```
 
 2. Install dependencies:
