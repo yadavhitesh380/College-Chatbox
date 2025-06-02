@@ -2,7 +2,6 @@ import streamlit as st
 import google.generativeai as genai
 import json
 import datetime
-import pandas as pd
 
 # --- Streamlit Page Settings ---
 st.set_page_config(page_title="GGSIPU Helpdesk Chatbot", layout="centered")
