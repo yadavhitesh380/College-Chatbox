@@ -9,7 +9,6 @@ This is an AI-powered chatbot built using Streamlit and Google Gemini API to ass
 - Conversational AI interface powered by Google Gemini API
 - Focused responses related only to GGSIPU
 - Example questions sidebar to guide users
-- File upload support for documents like ID proofs and forms (PDF, JPG, PNG)
 - Real-time chat display with user and assistant messages
 - Admin dashboard for viewing recent chat logs
 - Option to download chat logs as a `.txt` file for record-keeping
