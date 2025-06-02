@@ -95,5 +95,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Built with [Streamlit](https://streamlit.io/)
 - Powered by [Google Gemini API](https://developers.generativeai.google/)
-"# college-chatbot-ggsipu-" 
-"# college-chatbot-ggsipu-" 
+- 
